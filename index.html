@@ -336,10 +336,17 @@
             padding: 30px 0;
         }
 
-        /* Responsividade */
+        /* Responsividade (Ajuste para Mobile/Tablet - A FOTO VEM PRIMEIRO) */
         @media (max-width: 1200px) {
-            .hero-content { flex-direction: column; text-align: center; }
-            .hero-photo { margin-top: 50px; }
+            .hero-content { 
+                flex-direction: column; 
+                text-align: center; 
+            }
+            .hero-image-block {
+                order: -1; 
+                margin-bottom: 30px; /* Adiciona um espaço abaixo da foto */
+            }
+            .hero-photo { margin-top: 0; }
             h1 { font-size: 3.5em; }
             .history-grid, .testimonial-carousel, .metrics-grid { grid-template-columns: 1fr; }
         }
@@ -370,7 +377,7 @@
         <div class="container hero-content">
             <div class="hero-text-block">
                 <h1>SUA EMPRESA TEM UMA <span class="emphasis">DOENÇA TERMINAL</span> EM VENDAS.</h1>
-                <p class="subtitle">O antídoto não está em manuais. Ele está no método de <strong>Klayton Jardim de Oliveira</strong> — o único profissional que <strong>garante o resgate</strong> da sua performance corporativa.</p>
+                <p class="subtitle">O antídoto não está em manuais. Ele está no método de <strong>Klayton Jardim de Oliveira</strong> o único profissional que <strong>garante o resgate</strong> da sua performance corporativa.</p>
                 <a href="https://wa.me/5543996866714?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20estrat%C3%A9gica%20com%20Klayton%20Jardim%20de%20Oliveira." target="_blank" class="btn primary-btn">ATIVE A SOLUÇÃO AGORA</a>
             </div>
             <div class="hero-image-block">
