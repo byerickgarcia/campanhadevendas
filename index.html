@@ -14,7 +14,7 @@
             --color-secondary: #FFC300; /* OURO MAIS RICO (Destaque Vibrante e Foco) */
             --color-text-dark: #FFFFFF; /* Texto Principal Branco Puro */
             --color-text-light: #C0C0C0; /* Sub-texto Cinza Claro Sutil */
-            --color-accent: #0A1931; /* Azul Marinho (Segundo Plano) */
+            --color-accent: #0A1931; /* Azul Marinho (Segundo Plano - Usado em contraste leve) */
             --font-main: 'Poppins', sans-serif; /* MODIFICADO: Fonte Principal */
         }
 
@@ -34,7 +34,7 @@
             font-family: var(--font-main); /* MODIFICADO: Aplicação Poppins */
             color: var(--color-text-dark);
             line-height: 1.6; /* Leve ajuste no line-height para melhor legibilidade da Poppins */
-            background-color: var(--color-primary);
+            background-color: var(--color-primary); /* CORREÇÃO 1: Fundo Uniforme Garantido */
             overflow-x: hidden;
         }
         
@@ -89,61 +89,40 @@
             font-weight: 900;
         }
 
-        /* NAV BAR - Foco Total na Logo Centralizada e CTA */
+        /* NAV BAR - Foco Total na Logo Centralizada, sem links de navegação */
         .navbar {
             background-color: var(--color-primary);
-            padding: 25px 0; /* Maior altura */
+            padding: 25px 0; /* Espaçamento da navbar */
             position: sticky; /* Sticky em vez de Fixed para evitar cobrir muito a tela */
             top: 0;
             width: 100%;
             z-index: 1000;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
-        }
-        
-        /* Centralização total da nav para alto padrão (Logo no topo, links abaixo) */
-        .navbar .container {
+            /* MODIFICADO: Ajuste para apenas conter o logo */
             display: flex;
-            flex-direction: column;
+            justify-content: center; /* Centraliza o conteúdo (o logo) */
             align-items: center;
         }
-
+        
+        /* MODIFICADO: Estilo do Logo - Agora é o único elemento na navbar */
         .logo {
             font-size: 1.8em;
             color: var(--color-secondary);
             font-weight: 900;
             letter-spacing: 1px;
-            margin-bottom: 10px; /* Espaço entre logo e menu */
-            /* CORREÇÃO DA CENTRALIZAÇÃO MANTIDA */
-            width: 100%;
-            text-align: center;
-        }
-        .navbar ul { list-style: none; display: flex; justify-content: center; }
-        .navbar ul li a {
-            color: var(--color-text-light);
-            text-decoration: none;
-            padding: 8px 15px; /* Links menores e discretos */
-            font-weight: 400;
-            transition: color 0.3s;
-            text-transform: uppercase;
-            font-size: 0.9em;
-        }
-        .navbar ul li a:hover {
-            color: var(--color-secondary);
-        }
-        .nav-cta {
-            background-color: var(--color-secondary);
-            color: var(--color-primary) !important;
-            padding: 10px 20px;
-            border-radius: 50px; /* Botão mais moderno */
-            margin-left: 20px;
-            font-weight: 700;
-        }
-        .nav-cta:hover {
-            background-color: var(--color-text-dark);
-            color: var(--color-primary) !important;
+            text-align: center; /* Garante que o texto do logo esteja centralizado */
+            width: 100%; /* Ocupa a largura total para centralizar */
         }
 
-        /* Botões de Comando */
+        /* MODIFICADO: Remove os estilos dos links de navegação, pois eles não existem mais aqui */
+        .navbar ul { 
+            display: none; /* ESCONDE COMPLETAMENTE O MENU DE NAVEGAÇÃO SUPERIOR */
+        }
+        .navbar ul li a, .nav-cta {
+            display: none; /* ESCONDE QUALQUER LINK/BOTÃO RESTANTE DA NAV BAR */
+        }
+
+        /* Botões de Comando - Ajustes para Centralização */
         .btn {
             display: inline-block;
             padding: 18px 45px;
@@ -181,8 +160,7 @@
 
         /* HERO SECTION */
         .hero {
-            /* Fundo escuro simples para autoridade máxima, removendo gradientes complexos */
-            background-color: var(--color-primary); 
+            background-color: var(--color-primary); /* Fundo sólido primário */
             min-height: 90vh;
             display: flex;
             align-items: center;
@@ -198,6 +176,19 @@
         }
         .hero-text-block {
             max-width: 60%;
+            /* MODIFICADO: Centraliza o texto e os botões dentro deste bloco */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza itens flex horizontalmente */
+            text-align: center; /* Centraliza o texto */
+        }
+        .hero-text-block .subtitle {
+            margin: 20px auto; /* Centraliza subtítulo também */
+        }
+        .hero-buttons {
+            /* MODIFICADO: Container para centralizar os botões */
+            text-align: center; 
+            margin-top: 20px;
         }
         .hero-photo {
             width: 400px;
@@ -210,21 +201,27 @@
         
         /* Restante das Seções - Ajustes Finos */
         .section { padding: 100px 0; position: relative; } /* Padding padronizado */
-        .about-section { background-color: var(--color-accent); }
-        .parallax-bg {
-            /* Cor pura e forte para a citação, sem BG de imagem */
-            background-color: #182C47; 
-            height: 35vh; /* Menos alto, mais focado */
+        .about-section { 
+            background-color: var(--color-accent); /* Usa a cor de destaque para contraste sutil */
+            text-align: center; /* MODIFICADO: Centraliza o conteúdo da seção About */
         }
-        .parallax-bg h3 {
-            font-size: 2.5em; /* Citação mais contida e legível */
-            text-shadow: none; 
-            letter-spacing: 2px;
-            font-weight: 700;
-            color: var(--color-secondary);
+        .history-grid {
+            /* MODIFICADO: Centraliza itens quando o layout é flex ou grid */
+            justify-content: center;
+            margin-top: 40px;
         }
-
-        /* Seção Histórico (mantida a estrutura, mas com estilos refinados) */
+        .history-text {
+            /* MODIFICADO: Centraliza o texto dentro da coluna */
+            text-align: center;
+        }
+        .history-text .subtitle {
+            margin: 20px auto; /* Centraliza o subtítulo */
+        }
+        .history-points {
+            text-align: left; /* Mantém os pontos alinhados à esquerda para leitura */
+            max-width: 500px; /* Limita largura para melhor apresentação */
+            margin: 0 auto; /* Centraliza a lista de pontos */
+        }
         .history-points li {
             border-right: none;
             border-left: 5px solid var(--color-secondary); /* Destaque lateral ouro */
@@ -234,7 +231,28 @@
             font-size: 1.2em;
         }
 
+        .parallax-bg {
+            background-color: var(--color-accent); /* MODIFICADO: Usa a cor de destaque */
+            height: 35vh; /* Menos alto, mais focado */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7); /* Sombra interna mais sutil */
+        }
+        .parallax-bg h3 {
+            font-size: 2.5em; /* Citação mais contida e legível */
+            text-shadow: none; 
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: var(--color-secondary);
+        }
+
         /* Métricas */
+        .metric-section { 
+            background-color: var(--color-primary); 
+            text-align: center; /* MODIFICADO: Centraliza a seção de métricas */
+        }
         .metric-item {
             border: 1px solid var(--color-accent);
             border-top: 5px solid var(--color-secondary);
@@ -246,17 +264,26 @@
         }
         
         /* Depoimentos */
+        .testimonial-section { 
+            background-color: var(--color-accent); 
+            text-align: center; /* MODIFICADO: Centraliza a seção de depoimentos */
+        }
         .testimonial-item {
             border-left: 5px solid var(--color-secondary);
-            background-color: var(--color-accent);
+            background-color: var(--color-primary);
         }
         .quote-icon {
             color: var(--color-secondary);
             opacity: 0.1;
         }
+        .testimonial-carousel {
+            margin-top: 40px; /* Espaço após o título */
+        }
 
         /* CTA Final */
         .cta-section {
+            background-color: var(--color-primary);
+            text-align: center;
             padding: 80px 0;
             border-top: 5px solid var(--color-secondary);
         }
@@ -271,6 +298,7 @@
         footer {
             padding: 20px 0;
             font-size: 0.9em;
+            background-color: var(--color-accent); /* MODIFICADO: Fundo do footer para consistência */
         }
 
 
@@ -279,10 +307,11 @@
             .hero-content { 
                 flex-direction: column; 
                 text-align: center; 
-                padding-top: 150px;
+                padding-top: 100px; /* Ajusta padding para o logo no topo */
             }
             .hero-text-block {
                 max-width: 100%;
+                align-items: center; /* Centraliza itens no bloco de texto do hero */
             }
             .hero-image-block {
                 order: -1; 
@@ -292,14 +321,27 @@
             .hero-photo { width: 350px; height: 350px; }
             .history-grid, .testimonial-carousel { grid-template-columns: 1fr; }
             .metrics-grid { grid-template-columns: repeat(2, 1fr); }
-            .navbar ul { margin-top: 15px; }
+            /* MODIFICADO: Navbar em mobile agora é mais simples, apenas o logo */
+            .navbar .container {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            .logo { margin-bottom: 0; }
         }
         @media (max-width: 768px) {
-            h1 { font-size: 2.5em; letter-spacing: 1px; }
-            h2.section-title { font-size: 2em; }
+            h1 { font-size: 2.2em; letter-spacing: 0px; } /* Ajuste para telas menores */
+            h2.section-title { font-size: 1.8em; }
+            .subtitle { font-size: 1em; }
+            .hero-photo { width: 280px; height: 280px; }
             .metrics-grid { grid-template-columns: 1fr; }
-            .navbar ul { flex-wrap: wrap; }
-            .nav-cta { margin-top: 10px; margin-left: 0; }
+            .btn { padding: 15px 30px; font-size: 0.9em; }
+            .secondary-btn { margin-left: 0; margin-top: 15px; } /* Empilha botões em mobile */
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .parallax-bg h3 { font-size: 1.8em; }
         }
     </style>
 </head>
@@ -307,14 +349,8 @@
 
     <nav class="navbar">
         <div class="container">
-            <span class="logo">KLAYTON OLIVEIRA</span> 
-            <ul>
-                <li><a href="#sobre">A Solução</a></li>
-                <li><a href="#autoridade">A Prova</a></li>
-                <li><a href="#depoimentos">Cases</a></li>
-                <li><a href="https://wa.me/5543996866714?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20estrat%C3%A9gica%20com%20Klayton%20Jardim%20de%20Oliveira." target="_blank" class="nav-cta">URGÊNCIA VIA WHATSAPP</a></li>
-            </ul>
-        </div>
+            <span class="logo">KLAYTON OLIVEIRA</span>
+            </div>
     </nav>
 
     <header class="hero">
@@ -328,8 +364,9 @@
                 <p class="subtitle">
                     O antídoto não está em manuais. Ele está no método de <strong>Klayton Jardim de Oliveira</strong>: o único profissional que <strong>garante o resgate imediato</strong> da sua performance corporativa de alto padrão.
                 </p>
-                <a href="https://wa.me/5543996866714?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20estrat%C3%A9gica%20com%20Klayton%20Jardim%20de%20Oliveira." target="_blank" class="btn primary-btn">ATIVE A SOLUÇÃO AGORA</a>
-                <a href="#sobre" class="btn secondary-btn">ENTENDA A METODOLOGIA</a>
+                <div class="hero-buttons"> <a href="https://wa.me/5543996866714?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20estrat%C3%A9gica%20com%20Klayton%20Jardim%20de%20Oliveira." target="_blank" class="btn primary-btn">ATIVE A SOLUÇÃO AGORA</a>
+                    <a href="#sobre" class="btn secondary-btn">ENTENDA A METODOLOGIA</a>
+                </div>
             </div>
             <div class="hero-image-block">
                 <img src="https://i.ibb.co/r2BP56G7/IMG-3374.jpg" alt="Klayton Jardim de Oliveira - Autoridade Global em Vendas" class="hero-photo">
