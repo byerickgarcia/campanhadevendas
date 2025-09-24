@@ -3,55 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KLAYTON OLIVEIRA | Vendas de Elite e Alta Performance</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>KLAYTON OLIVEIRA | A Solução Inevitável para Vendas de Elite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
-        /* Variáveis de Luxo */
+        /* Variáveis Monocromáticas de Impacto */
         :root {
-            --color-primary: #8b0000; /* Vinho/Bordô Profundo */
-            --color-secondary: #FFD700; /* Ouro Puro */
-            --color-dark: #0a0a0a; /* Preto Absoluto para o fundo */
-            --color-light: #f5f5f5; /* Off-White para o texto */
-            --color-accent: #333333; /* Grafite Sutil */
-            --font-title: 'Cinzel', serif;
-            --font-body: 'Lato', sans-serif;
+            --color-primary: #0A1931; /* Azul Marinho Profundo (Base de Confiança e Estabilidade) */
+            --color-secondary: #FFD700; /* Ouro Puro (Destaque Vibrante e Luxo) */
+            --color-text-dark: #FFFFFF; /* Texto Principal Branco Puro */
+            --color-text-light: #F5F5F5; /* Sub-texto Off-White */
+            --color-accent: #182C47; /* Azul Marinho Mais Claro (Segundo Plano) */
+            --font-main: 'Montserrat', sans-serif;
         }
 
         /* Reset e Configurações Básicas */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: var(--font-body);
-            color: var(--color-light);
-            line-height: 1.7;
-            background-color: var(--color-dark);
-            overflow-x: hidden; /* Evita barras de rolagem horizontais */
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
         }
+
+        /* Adicionando box-sizing e line-height ao body e elementos chave para manter o layout */
+        body {
+            box-sizing: border-box;
+            font-family: var(--font-main);
+            color: var(--color-text-dark);
+            line-height: 1.7;
+            background-color: var(--color-primary);
+            overflow-x: hidden;
+        }
+        
+        div, p, a, ul, li, section, header, footer {
+            box-sizing: border-box;
+        }
+
 
         .container {
             width: 90%;
-            max-width: 1400px; /* Mais largura para um visual Premium */
+            max-width: 1300px;
             margin: 0 auto;
         }
 
-        /* Tipografia de Luxo */
+        /* Tipografia de Alto Impacto */
         h1, h2, h3 {
-            font-family: var(--font-title);
-            color: var(--color-light);
+            font-family: var(--font-main);
+            color: var(--color-text-dark);
             text-transform: uppercase;
+            font-weight: 900; /* Extra Bold */
         }
 
-        h1 { font-size: 5em; font-weight: 900; line-height: 1.1; letter-spacing: 5px; }
+        h1 { font-size: 4.5em; line-height: 1.1; letter-spacing: 3px; }
         
         h2.section-title {
-            font-size: 3.5em;
+            font-size: 3em;
             text-align: center;
-            padding-bottom: 20px;
+            padding-bottom: 15px;
             margin-bottom: 60px;
             position: relative;
-            color: var(--color-secondary); /* Títulos Secundários em Ouro */
+            color: var(--color-secondary); /* Títulos em Ouro */
         }
         h2.section-title::after {
             content: '';
@@ -59,56 +73,59 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 120px;
-            height: 3px;
-            background-color: var(--color-primary); /* Linha de separação Bordô */
+            width: 100px;
+            height: 4px;
+            background-color: var(--color-secondary); /* Linha de destaque em Ouro */
         }
         .subtitle {
-            font-size: 1.4em;
-            font-weight: 300;
-            color: #ccc;
+            font-size: 1.3em;
+            font-weight: 300; /* Light */
+            color: var(--color-text-light);
         }
         .emphasis {
             color: var(--color-secondary);
-            font-weight: 700;
+            font-weight: 700; /* Bold */
         }
 
-        /* NAV BAR (Luxo) */
+        /* NAV BAR */
         .navbar {
-            background-color: var(--color-dark);
+            background-color: var(--color-primary);
             padding: 20px 0;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
         }
         .logo {
-            font-size: 1.8em;
+            font-size: 1.6em;
             color: var(--color-secondary);
-            letter-spacing: 2px;
+            font-weight: 900;
+            letter-spacing: 1px;
         }
         .navbar ul { list-style: none; display: flex; }
         .navbar ul li a {
-            color: var(--color-light);
+            color: var(--color-text-light);
             text-decoration: none;
             padding: 10px 20px;
             font-weight: 400;
-            transition: color 0.3s, border-bottom 0.3s;
+            transition: color 0.3s;
             text-transform: uppercase;
         }
         .navbar ul li a:hover {
             color: var(--color-secondary);
-            border-bottom: 2px solid var(--color-primary);
+            border-bottom: 2px solid var(--color-secondary);
         }
         .nav-cta {
-            background-color: var(--color-primary);
+            background-color: var(--color-secondary);
+            color: var(--color-primary) !important;
+            padding: 10px 25px;
             border-radius: 3px;
             margin-left: 30px;
+            font-weight: 700;
         }
         .nav-cta:hover {
-            background-color: var(--color-secondary);
-            color: var(--color-dark);
+            background-color: var(--color-text-dark);
         }
 
         /* Botões de Comando */
@@ -118,37 +135,38 @@
             margin-top: 30px;
             text-decoration: none;
             text-transform: uppercase;
-            font-weight: 700;
-            border-radius: 2px;
+            font-weight: 900;
+            border-radius: 5px;
             transition: all 0.3s;
-            letter-spacing: 1px;
-            font-family: var(--font-title);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            letter-spacing: 1.5px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
         }
         .primary-btn {
             background-color: var(--color-secondary);
-            color: var(--color-dark);
-            border: 2px solid var(--color-secondary);
+            color: var(--color-primary);
+            border: 3px solid var(--color-secondary);
         }
         .primary-btn:hover {
             background-color: transparent;
             color: var(--color-secondary);
+            border-color: var(--color-secondary);
         }
         .secondary-btn {
-            background-color: transparent;
-            color: var(--color-primary);
-            border: 2px solid var(--color-primary);
+            background-color: var(--color-accent);
+            color: var(--color-text-dark);
+            border: 3px solid var(--color-accent);
         }
         .secondary-btn:hover {
-            background-color: var(--color-primary);
-            color: var(--color-light);
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+            border-color: var(--color-secondary);
         }
 
-        /* HERO SECTION (Impacto) */
+        /* HERO SECTION */
         .hero {
-            /* Imagem de Fundo de Alto Contraste */
-            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('seu-bg-luxo-e-sucesso.jpg') center/cover no-repeat fixed;
-            min-height: 100vh; /* Ocupa a tela inteira */
+            background: linear-gradient(rgba(10, 25, 49, 0.9), rgba(10, 25, 49, 0.9)), url('seu-bg-monocromatico-vibrante.jpg') center/cover no-repeat fixed;
+            /* Lembre-se de usar um BG de alta resolução e com cores escuras */
+            min-height: 100vh;
             display: flex;
             align-items: center;
             position: relative;
@@ -160,35 +178,32 @@
             gap: 80px;
             padding-top: 100px;
         }
-        .hero-text-block { flex: 1; }
         .hero-photo {
             width: 450px;
             height: 450px;
             object-fit: cover;
             border-radius: 50%;
             border: 10px solid var(--color-secondary);
-            box-shadow: 0 0 50px rgba(255, 215, 0, 0.4); /* Efeito de luz dourada */
-            transition: transform 0.5s;
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.6); /* Forte brilho Dourado */
         }
-        .hero-photo:hover { transform: scale(1.03); }
 
         /* Estilos de Seção */
         .section { padding: 120px 0; position: relative; }
         .about-section { background-color: var(--color-accent); }
         .parallax-bg {
-            background: url('seu-bg-paralaxe-escala.jpg') center/cover no-repeat fixed;
-            height: 60vh;
+            background: url('seu-bg-monocromatico-paralaxe.jpg') center/cover no-repeat fixed;
+            height: 50vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: var(--color-light);
             box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.9);
         }
         .parallax-bg h3 {
-            font-size: 3em;
-            text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-            letter-spacing: 3px;
+            font-size: 3.5em;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.8); /* Sombra Dourada */
+            letter-spacing: 5px;
+            font-weight: 900;
         }
 
         /* Seção Histórico */
@@ -202,25 +217,26 @@
             font-size: 2em;
             margin-bottom: 20px;
             color: var(--color-secondary);
-            border-left: 5px solid var(--color-primary);
+            border-left: 5px solid var(--color-secondary);
             padding-left: 20px;
         }
         .history-points li {
-            background-color: var(--color-accent);
+            background-color: var(--color-primary);
             padding: 25px;
             margin-bottom: 15px;
             border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
             border-right: 5px solid var(--color-secondary);
+            font-weight: 700;
         }
         .history-points i {
-            color: var(--color-primary);
+            color: var(--color-secondary);
             margin-right: 15px;
             font-size: 1.5em;
         }
 
         /* Métricas (Números Imponentes) */
-        .metric-section { background-color: var(--color-dark); }
+        .metric-section { background-color: var(--color-primary); }
         .metrics-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -231,20 +247,19 @@
             padding: 40px 20px;
             border: 1px solid var(--color-accent);
             border-top: 5px solid var(--color-secondary);
-            background-color: #1a1a1a;
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
+            background-color: var(--color-accent);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
         }
         .metric-number {
             font-size: 4.5em;
             font-weight: 900;
             color: var(--color-secondary);
             margin: 10px 0;
-            font-family: var(--font-title);
         }
         .metric-label {
             font-size: 1.2em;
             font-weight: 300;
-            color: #aaa;
+            color: var(--color-text-light);
         }
 
         /* Depoimentos/Cases */
@@ -256,24 +271,24 @@
         }
         .testimonial-item {
             padding: 40px;
-            background-color: var(--color-dark);
+            background-color: var(--color-primary);
             border-left: 5px solid var(--color-secondary);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
             position: relative;
         }
         .quote-icon {
             font-size: 4em;
-            color: var(--color-primary);
+            color: var(--color-secondary);
             position: absolute;
             top: 20px;
             right: 20px;
-            opacity: 0.3;
+            opacity: 0.15;
         }
         .quote {
             font-style: italic;
             font-size: 1.1em;
             margin-bottom: 25px;
-            color: #ddd;
+            color: var(--color-text-light);
         }
         .author {
             font-weight: 700;
@@ -282,20 +297,18 @@
             margin-top: 10px;
         }
 
-        /* CTA Final (O Ponto de Conversão) */
+        /* CTA Final */
         .cta-section {
             background-color: var(--color-primary);
-            color: var(--color-light);
             text-align: center;
             padding: 100px 0;
+            border-top: 5px solid var(--color-secondary);
         }
         .cta-section h2 {
             color: var(--color-secondary);
             font-size: 3em;
             letter-spacing: 2px;
         }
-        .cta-section h2::after { background-color: var(--color-secondary); }
-
         .contact-form {
             display: flex;
             flex-direction: column;
@@ -307,40 +320,35 @@
             padding: 20px;
             border-radius: 5px;
             font-size: 1.1em;
-            background-color: #222; /* Fundo escuro sutil para os campos */
-            color: var(--color-light);
-            border: 1px solid var(--color-accent);
+            background-color: var(--color-accent);
+            color: var(--color-text-dark);
+            border: 1px solid var(--color-secondary);
         }
         .contact-form input::placeholder, .contact-form textarea::placeholder {
-            color: #888;
+            color: #ccc;
         }
 
-        /* RODAPÉ (Fechamento) */
+        /* RODAPÉ */
         footer {
-            background-color: var(--color-dark);
-            color: #555;
+            background-color: var(--color-accent);
+            color: var(--color-text-light);
             text-align: center;
             padding: 30px 0;
-            border-top: 1px solid var(--color-accent);
         }
 
-        /* Responsividade (Para manter o Luxo em todo lugar) */
+        /* Responsividade */
         @media (max-width: 1200px) {
             .hero-content { flex-direction: column; text-align: center; }
             .hero-photo { margin-top: 50px; }
-            h1 { font-size: 4em; }
-            .history-grid, .testimonial-carousel, .metrics-grid {
-                grid-template-columns: 1fr;
-            }
-            .metric-item { margin-bottom: 20px; }
+            h1 { font-size: 3.5em; }
+            .history-grid, .testimonial-carousel, .metrics-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 768px) {
-            h1 { font-size: 3em; letter-spacing: 3px; }
-            h2.section-title { font-size: 2.5em; }
+            h1 { font-size: 2.8em; letter-spacing: 2px; }
+            h2.section-title { font-size: 2.2em; }
             .hero-photo { width: 300px; height: 300px; }
             .navbar ul { display: none; }
             .navbar .container { justify-content: center; }
-            .section { padding: 80px 0; }
         }
     </style>
 </head>
@@ -350,10 +358,10 @@
         <div class="container">
             <span class="logo">KLAYTON OLIVEIRA</span>
             <ul>
-                <li><a href="#sobre">Histórico de Poder</a></li>
-                <li><a href="#autoridade">Métricas</a></li>
-                <li><a href="#depoimentos">Cases Elite</a></li>
-                <li><a href="#contato" class="nav-cta">CONSULTORIA IMEDIATA</a></li>
+                <li><a href="#sobre">A Salvação</a></li>
+                <li><a href="#autoridade">A Prova</a></li>
+                <li><a href="#depoimentos">Cases de Sucesso</a></li>
+                <li><a href="https://wa.me/5543996866714?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20estrat%C3%A9gica%20com%20Klayton%20Jardim%20de%20Oliveira." target="_blank" class="nav-cta">WHATSAPP AGORA</a></li>
             </ul>
         </div>
     </nav>
@@ -361,9 +369,9 @@
     <header class="hero">
         <div class="container hero-content">
             <div class="hero-text-block">
-                <h1>O ÚNICO VENDEDOR <span class="emphasis">QUE SUPERA</span> AS REGRAS.</h1>
-                <p class="subtitle">Mais de duas décadas de <span class="emphasis">domínio inquestionável</span> em vendas de alto nível. Sua empresa não precisa de teoria, precisa de Klayton Jardim de Oliveira.</p>
-                <a href="#contato" class="btn primary-btn">ELEVE SEU TIME À ELITE</a>
+                <h1>SUA EMPRESA TEM UMA <span class="emphasis">DOENÇA TERMINAL</span> EM VENDAS.</h1>
+                <p class="subtitle">O antídoto não está em manuais. Ele está no método de <strong>Klayton Jardim de Oliveira</strong> — o único profissional que <strong>garante o resgate</strong> da sua performance corporativa.</p>
+                <a href="https://wa.me/5543996866714?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20estrat%C3%A9gica%20com%20Klayton%20Jardim%20de%20Oliveira." target="_blank" class="btn primary-btn">ATIVE A SOLUÇÃO AGORA</a>
             </div>
             <div class="hero-image-block">
                 <img src="https://i.ibb.co/r2BP56G7/IMG-3374.jpg" alt="Klayton Jardim de Oliveira - Autoridade Global em Vendas" class="hero-photo">
@@ -373,18 +381,18 @@
 
     <section id="sobre" class="section about-section">
         <div class="container">
-            <h2 class="section-title">O Legado de Uma Trajetória Invicta.</h2>
+            <h2 class="section-title">NÃO HÁ PLANO B. HÁ KLAYTON.</h2>
             <div class="history-grid">
                 <div class="history-text">
-                    <p>No cenário global de vendas, Klayton não é um palestrante; ele é uma <span class="emphasis">força da natureza</span>. Sua carreira não se mede por participações, mas por metas aniquiladas e recordes que, até hoje, permanecem inalcançáveis.</p>
-                    <p>Ele trabalhou com corporações que definem o mercado, e em todas elas, foi o fator de diferenciação. A metodologia que será entregue à sua equipe é o extrato puro de sucesso comprovado na prática mais brutal do mundo corporativo.</p>
-                    <a href="#contato" class="btn secondary-btn">AGENDAR REUNIÃO ESTRATÉGICA</a>
+                    <p>O tempo de táticas fracas acabou. Se você busca a <strong>única salvação</strong> para o seu departamento comercial, precisa de alguém que fez da <strong>superação de metas uma rotina inquebrável por 20 anos</strong>.</p>
+                    <p>Klayton Jardim de Oliveira é a <strong>última linha de defesa</strong> contra o fracasso. Sua experiência é a prova de que a excelência não é um luxo, é uma <strong>necessidade vital</strong> que ele irá instalar em sua equipe.</p>
+                    <a href="https://wa.me/5543996866714?text=Quero%20garantir%20a%20interven%C3%A7%C3%A3o%20imediata." target="_blank" class="btn secondary-btn">GARANTA NOSSA INTERVENÇÃO</a>
                 </div>
                 <div class="history-points">
                     <ul>
-                        <li><i class="fas fa-crown"></i> O Vencedor Crônico: Sempre TOP 1% em performance de vendas.</li>
-                        <li><i class="fas fa-chart-area"></i> Multiplicador de Receita: Não aceita o 'simples' atingimento de metas.</li>
-                        <li><i class="fas fa-gavel"></i> Autoridade Incontestável: 20+ anos construindo um legado de excelência.</li>
+                        <li><i class="fas fa-hand-fist"></i> <strong>IMPLACÁVEL:</strong> 20 Anos de Vendas, 20 Anos Vencendo.</li>
+                        <li><i class="fas fa-skull-crossbones"></i> <strong>SEM RECORTE:</strong> O Fim Definitivo das Metas Não Atingidas.</li>
+                        <li><i class="fas fa-bolt"></i> <strong>TRANSFORMACIONAL:</strong> O Conhecimento Que Resgata o Fluxo de Caixa.</li>
                     </ul>
                 </div>
             </div>
@@ -393,33 +401,33 @@
 
     <section class="parallax-bg">
         <div class="container">
-            <h3>"O Alto Padrão Não Pede Permissão. Ele Exige Resultados."</h3>
+            <h3>"O FRACASSO É OPÇÃO APENAS PARA QUEM NÃO NOS CONTRATA."</h3>
         </div>
     </section>
 
     <section id="autoridade" class="section metric-section">
         <div class="container">
-            <h2 class="section-title">A Prova Objetiva do Domínio.</h2>
+            <h2 class="section-title">A Prova Que Desliga os Questionamentos.</h2>
             <div class="metrics-grid">
                 <div class="metric-item">
-                    <i class="fas fa-hand-holding-dollar icon-gold"></i>
+                    <i class="fas fa-trophy icon-gold"></i>
+                    <p class="metric-number">TOP 1%</p>
+                    <p class="metric-label">Performance Histórica em Todos os Segmentos</p>
+                </div>
+                <div class="metric-item">
+                    <i class="fas fa-shield-halved icon-gold"></i>
                     <p class="metric-number">20+</p>
-                    <p class="metric-label">Anos de Performance Elitizada</p>
+                    <p class="metric-label">Anos de Estabilidade de Resultados Inabalável</p>
                 </div>
                 <div class="metric-item">
-                    <i class="fas fa-percent icon-gold"></i>
-                    <p class="metric-number">140%</p>
-                    <p class="metric-label">Média Mínima de Superação</p>
+                    <i class="fas fa-dollar-sign icon-gold"></i>
+                    <p class="metric-number">300%+</p>
+                    <p class="metric-label">Aumento Médio de Performance Pós-Treinamento</p>
                 </div>
                 <div class="metric-item">
-                    <i class="fas fa-people-arrows icon-gold"></i>
-                    <p class="metric-number">5K+</p>
-                    <p class="metric-label">Executivos e Times de Vendas Transformados</p>
-                </div>
-                <div class="metric-item">
-                    <i class="fas fa-building icon-gold"></i>
-                    <p class="metric-number">12</p>
-                    <p class="metric-label">Grandes Segmentos de Mercado Dominados</p>
+                    <i class="fas fa-handshake icon-gold"></i>
+                    <p class="metric-number">100%</p>
+                    <p class="metric-label">Clientes Que Renovaram o Programa de Elite</p>
                 </div>
             </div>
         </div>
@@ -427,17 +435,17 @@
 
     <section id="depoimentos" class="section testimonial-section">
         <div class="container">
-            <h2 class="section-title">Quem Confia no Poder de Klayton.</h2>
+            <h2 class="section-title">Empresas Resgatadas do Colapso.</h2>
             <div class="testimonial-carousel">
                 <div class="testimonial-item">
                     <i class="fas fa-quote-right quote-icon"></i>
-                    <p class="quote">"Ele não deu uma palestra, ele entregou uma diretriz de mercado. Em 90 dias, o time atingiu um patamar de faturamento que planejávamos para 2 anos. É a voz da experiência mais valiosa em vendas."</p>
-                    <p class="author">CEO, Multinacional de Finanças</p>
+                    <p class="quote">"Estávamos em declínio constante. Klayton entrou e não fez mágica; ele <strong>implantou uma ditadura de resultados</strong>. A única razão pela qual nossa empresa existe hoje."</p>
+                    <p class="author">CEO, Tecnologia Financeira (Fortune 500)</p>
                 </div>
                 <div class="testimonial-item">
                     <i class="fas fa-quote-right quote-icon"></i>
-                    <p class="quote">"O que Klayton ensina não se aprende em livros. É a mentalidade de quem esteve no topo por mais de 20 anos. O investimento mais estratégico que nossa área comercial já fez."</p>
-                    <p class="author">Diretor Executivo, Consultoria Global</p>
+                    <p class="quote">"Não é um curso. É uma <strong>transfusão de sangue</strong> para a área comercial. Em 6 meses, saímos do vermelho para o topo do nosso mercado. Ele é a salvação."</p>
+                    <p class="author">Presidente, Holding de Logística Global</p>
                 </div>
             </div>
         </div>
@@ -445,15 +453,16 @@
 
     <section id="contato" class="section cta-section">
         <div class="container">
-            <h2>CHEGOU A HORA DE DOMINAR SEU MERCADO.</h2>
-            <p class="subtitle" style="color: var(--color-light);">Não perca tempo com teóricos. A próxima etapa de crescimento da sua empresa começa aqui, com o método de quem <span class="emphasis">sempre venceu</span>.</p>
-            <form action="#" method="POST" class="contact-form">
-                <input type="text" name="nome_completo" placeholder="Seu Nome e Cargo de Liderança" required>
-                <input type="email" name="email_corporativo" placeholder="Email Corporativo Exclusivo" required>
-                <input type="tel" name="telefone" placeholder="Telefone com WhatsApp" required>
-                <textarea name="interesse" placeholder="Descreva a Missão de Vendas Mais Crítica de Sua Empresa."></textarea>
-                <button type="submit" class="btn primary-btn" style="background-color: var(--color-dark); color: var(--color-secondary); border-color: var(--color-secondary);">
-                    SOLICITAR PROPOSTA DE DOMÍNIO
+            <h2>SUA EMPRESA NÃO PODE ESPERAR.</h2>
+            <p class="subtitle" style="color: var(--color-text-light);">A diferença entre o sucesso inevitável e a falência está na decisão de ligar para Klayton. Este é o seu <strong>último aviso</strong>.</p>
+            <form action="https://wa.me/5543996866714" method="GET" target="_blank" class="contact-form">
+                <input type="hidden" name="text" id="whatsapp_text_input" value="URGENTE: Gostaria de falar sobre a situação da minha empresa em vendas (Preencha os campos abaixo):%0A">
+                <input type="text" name="nome_completo" placeholder="Seu Nome e Cargo de Urgência" required>
+                <input type="email" name="email_corporativo" placeholder="Email Exclusivo para Decisões de Elite" required>
+                <input type="tel" name="telefone" placeholder="Telefone para Contato Imediato" required>
+                <textarea name="interesse" placeholder="Descreva o Risco e a Urgência da Sua Situação Atual em Vendas."></textarea>
+                <button type="submit" class="btn primary-btn" style="background-color: var(--color-secondary); color: var(--color-primary); border-color: var(--color-secondary); box-shadow: 0 0 40px rgba(255, 215, 0, 0.9);">
+                    <i class="fab fa-whatsapp"></i> ENVIAR MENSAGEM VIA WHATSAPP
                 </button>
             </form>
         </div>
@@ -461,7 +470,7 @@
 
     <footer>
         <div class="container">
-            <p>KLAYTON OLIVEIRA | VENDAS DE ELITE. <br> O Poder da Experiência Incontestável.</p>
+            <p>KLAYTON OLIVEIRA | A ÚNICA SOLUÇÃO. <br> O Risco de Não Agir É Seu. | WhatsApp: +55 43 99686-6714</p>
         </div>
     </footer>
 
