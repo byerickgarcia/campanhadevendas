@@ -34,7 +34,7 @@
             font-family: var(--font-main);
             color: var(--color-text-dark);
             line-height: 1.7;
-            background-color: var(--color-primary);
+            background-color: var(--color-primary); /* CORREÇÃO 1: Fundo Uniforme Já Estava OK */
             overflow-x: hidden;
         }
         
@@ -97,13 +97,32 @@
             z-index: 1000;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
         }
+        
+        /* CORREÇÃO 2: CENTRALIZAÇÃO DO NOME (O nome está na classe .logo) */
         .logo {
             font-size: 1.6em;
             color: var(--color-secondary);
             font-weight: 900;
             letter-spacing: 1px;
+            /* LINHAS ADICIONADAS PARA CENTRALIZAR O TEXTO: */
+            width: 100%; /* Garante que o span ocupe toda a largura */
+            text-align: center; /* Centraliza o texto */
         }
-        .navbar ul { list-style: none; display: flex; }
+
+        /* O container do navbar precisa mudar para acomodar a centralização do logo */
+        .navbar .container {
+            /* Remove o display: flex que alinhava tudo lado a lado */
+            display: block; 
+            text-align: center; 
+        }
+
+        /* Os links de navegação precisam de um ajuste para aparecerem na linha de baixo */
+        .navbar ul { 
+            list-style: none; 
+            display: flex; 
+            justify-content: center; /* Centraliza o menu na linha de baixo */
+            margin-top: 10px; /* Adiciona um espaço abaixo do nome */
+        }
         .navbar ul li a {
             color: var(--color-text-light);
             text-decoration: none;
@@ -176,7 +195,8 @@
             justify-content: space-between;
             align-items: center;
             gap: 80px;
-            padding-top: 100px;
+            /* Ajusta o padding para compensar a navbar que agora é maior */
+            padding-top: 150px; 
         }
         .hero-photo {
             width: 450px;
@@ -349,13 +369,34 @@
             .hero-photo { margin-top: 0; }
             h1 { font-size: 3.5em; }
             .history-grid, .testimonial-carousel, .metrics-grid { grid-template-columns: 1fr; }
+            
+            /* Ajuste para mobile da barra de navegação */
+            .navbar .container { 
+                display: flex; /* Volta a ser flex para o menu de mobile */
+                justify-content: center;
+                flex-direction: column;
+            }
+            .navbar ul { 
+                margin-top: 15px;
+                flex-wrap: wrap; 
+                justify-content: center; 
+            }
+            .logo {
+                text-align: center;
+                width: 100%;
+            }
+            .navbar ul li:last-child {
+                 margin-top: 10px;
+            }
         }
         @media (max-width: 768px) {
             h1 { font-size: 2.8em; letter-spacing: 2px; }
             h2.section-title { font-size: 2.2em; }
             .hero-photo { width: 300px; height: 300px; }
-            .navbar ul { display: none; }
-            .navbar .container { justify-content: center; }
+            /* Se for muito apertado, pode querer esconder o menu e deixar só o nome e o botão de contato, mas mantive o menu abaixo para não quebrar */
+            .navbar ul li {
+                padding: 0 5px;
+            }
         }
     </style>
 </head>
