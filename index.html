@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campanha de Venda de Elite | Klayton Jardim de Oliveira</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght=700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Variáveis de Cor (Ajustadas para mais profundidade) */
+        :root {
+            --primary-color: #7b0000; /* Bordô Profundo */
+            --secondary-color: #FFC300; /* Ouro Rico */
+            --text-dark: #1f1f1f;
+            --text-light: #f7f7f7;
+            --background-light: #ffffff;
+            --background-dark: #121212; /* Fundo Escuro para Elegância */
+            --accent-gray: #f2f2f2;
+        }
+
+        /* Reset e Configurações Básicas */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--background-light);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1250px;
+            margin: 0 auto;
+        }
+
+        /* Tipografia */
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            color: var(--text-dark);
+        }
+
+        h1 { font-size: 3.8em; line-height: 1.1; }
+        h2.section-title {
+            font-size: 2.8em;
+            text-align: center;
+            padding-bottom: 15px;
+            margin-bottom: 50px;
+            position: relative;
+            color: var(--primary-color);
+        }
+        h2.section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+        }
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        /* Nav Bar Fixa */
+        .navbar {
+            background-color: var(--background-dark);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: var(--secondary-color);
+            font-size: 1.5em;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+        .navbar ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: var(--secondary-color);
+        }
+        .nav-cta {
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            margin-left: 20px;
+        }
+        .nav-cta:hover {
+            background-color: var(--secondary-color);
+            color: var(--text-dark);
+        }
+
+        /* Botões */
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            margin-top: 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-radius: 50px; /* Borda arredondada para um toque moderno */
+            transition: all 0.3s;
+            letter-spacing: 0.5px;
+        }
+        .primary-btn {
+            background-color: var(--secondary-color);
+            color: var(--text-dark);
+            border: 2px solid var(--secondary-color);
+        }
+        .primary-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border-color: var(--primary-color);
+        }
+        .secondary-btn {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        .secondary-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+        }
+
+        /* Seção HERO (Apresentação Principal) */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('seu-bg-corporativo-luxo.jpg') center/cover no-repeat fixed;
+            /* Lembre-se de substituir 'seu-bg-corporativo-luxo.jpg' */
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            color: var(--text-light);
+        }
+        .hero-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+        }
+        .hero-text-block {
+            flex: 1;
+        }
+        .hero-text-block h1 {
+            color: var(--text-light);
+        }
+        .hero-photo {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 50%; /* Foto Circular para elegância */
+            border: 8px solid var(--secondary-color);
+            box-shadow: 0 0 30px rgba(255, 195, 0, 0.5); /* Brilho dourado */
+        }
+
+        /* Seções Padrão */
+        .section { padding: 100px 0; }
+        .about-section { background-color: var(--accent-gray); }
+
+        /* Grid da Seção Sobre */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+        .about-points ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .about-points ul li {
+            background-color: var(--background-light);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--primary-color);
+            border-radius: 5px;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .about-points ul li i {
+            color: var(--secondary-color);
+            margin-right: 15px;
+            font-size: 1.2em;
+        }
+
+        /* Seção de Métricas de Autoridade */
+        .metric-section {
+            background-color: var(--background-dark);
+            color: var(--text-light);
+        }
+        .metric-section h2 {
+            color: var(--secondary-color);
+        }
+        .metric-section h2::after {
+            background-color: var(--primary-color);
+        }
+        .metric-section .section-subtitle {
+            color: #ccc;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+        .metric-item {
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #222;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+        .metric-number {
+            font-size: 3em;
+            font-weight: 900;
+            color: var(--secondary-color);
+            margin: 10px 0;
+            font-family: 'Playfair Display', serif;
+        }
+        .metric-label {
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+        .icon-gold {
+            font-size: 2.5em;
+            color: var(--secondary-color);
+        }
+
+        /* Seção de Depoimentos/Cases */
+        .testimonial-section {
+            background-color: var(--background-light);
+            text-align: center;
+        }
+        .testimonial-carousel {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .testimonial-item {
+            max-width: 45%;
+            padding: 30px;
+            border: 2px solid var(--accent-gray);
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .testimonial-item::before {
+            content: "\201C"; /* Aspas de citação */
+            font-size: 6em;
+            color: var(--secondary-color);
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            opacity: 0.2;
+            line-height: 1;
+        }
+        .quote {
+            font-style: italic;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        .author {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        /* Seção CTA Final */
+        .cta-section {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            text-align: center;
+            padding: 80px 0;
+        }
+        .cta-section h2 {
+            color: var(--secondary-color);
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        .cta-section h2::after {
+            background-color: var(--secondary-color);
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            background-color: #fff;
+            color: var(--text-dark);
+            border: none;
+        }
+        .contact-form input::placeholder, .contact-form textarea::placeholder {
+            color: #888;
+        }
+        
+        /* Rodapé */
+        footer {
+            background-color: var(--background-dark);
+            color: #999;
+            text-align: center;
+            padding: 25px 0;
+        }
+
+        /* Responsividade para Mobile */
+        @media (max-width: 1000px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-photo {
+                width: 300px;
+                height: 300px;
+                margin-top: 30px;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .testimonial-carousel {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .testimonial-item {
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5em; }
+            h2.section-title { font-size: 2em; }
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+            .navbar ul {
+                display: none;
+            }
+            .navbar .container {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <span class="logo">Klayton Oliveira | Vendas Elite</span>
+            <ul>
+                <li><a href="#sobre">Histórico</a></li>
+                <li><a href="#autoridade">Métricas</a></li>
+                <li><a href="#depoimentos">Cases</a></li>
+                <li><a href="#contato" class="nav-cta">Consultoria</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text-block">
+                <h1>SUPERE AS METAS. REDEFINA O ALTO PADRÃO.</h1>
+                <p class="subtitle">A metodologia de vendas de um especialista com mais de **20 anos de domínio** no mercado de alta performance, pronto para elevar sua empresa.</p>
+                <a href="#contato" class="btn primary-btn">LIBERE O POTENCIAL MÁXIMO DA SUA EQUIPE</a>
+            </div>
+            <div class="hero-image-block">
+                <img src="https://i.ibb.co/r2BP56G7/IMG-3374.jpg" alt="Klayton Jardim de Oliveira - Vendas de Elite" class="hero-photo">
+            </div>
+        </div>
+    </header>
+
+    <section id="sobre" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">O Histórico que Sua Empresa Exige.</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Em um cenário corporativo onde a meta é o mínimo, **Klayton Jardim de Oliveira** construiu uma trajetória lendária. Sua marca registrada não é apenas atingir metas, mas sim **destruí-las e ultrapassá-las consistentemente**, ano após ano, por mais de duas décadas.</p>
+                    <p>Esta experiência prática em **vendas de alto padrão** – trabalhando com as maiores e mais exigentes empresas – confere a ele uma visão estratégica que transcende a teoria. Ele entrega o conhecimento exato para que seu time de vendas se torne um centro de lucro imbatível.</p>
+                    <a href="#contato" class="btn secondary-btn">FALE COM NOSSO TIME DE ELITE</a>
+                </div>
+                <div class="about-points">
+                    <ul>
+                        <li><i class="fas fa-medal"></i> **Mais de 20 Anos:** Expertise forjada no campo de batalha das grandes vendas.</li>
+                        <li><i class="fas fa-chart-line"></i> **Metas 100%+:** Histórico comprovado de superação consistente em todos os desafios.</li>
+                        <li><i class="fas fa-handshake-angle"></i> **Foco Exclusivo:** Soluções desenhadas para empresas e executivos de alto calibre.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="autoridade" class="section metric-section">
+        <div class="container">
+            <h2 class="section-title">O Poder dos Números.</h2>
+            <p class="section-subtitle">A excelência em vendas é quantificável. Estes são os pilares da autoridade de **Klayton**.</p>
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <i class="fas fa-hand-holding-dollar icon-gold"></i>
+                    <p class="metric-number">20+</p>
+                    <p class="metric-label">Anos de Liderança em Vendas</p>
+                </div>
+                <div class="metric-item">
+                    <i class="fas fa-rocket icon-gold"></i>
+                    <p class="metric-number">140%</p>
+                    <p class="metric-label">Média de Superação de Metas</p>
+                </div>
+                <div class="metric-item">
+                    <i class="fas fa-users-gear icon-gold"></i>
+                    <p class="metric-number">3K+</p>
+                    <p class="metric-label">Vendedores Treinados</p>
+                </div>
+                <div class="metric-item">
+                    <i class="fas fa-briefcase icon-gold"></i>
+                    <p class="metric-number">TOP 1%</p>
+                    <p class="metric-label">Performance em Mercado de Elite</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="section testimonial-section">
+        <div class="container">
+            <h2 class="section-title">Resultados que Falam Por Si.</h2>
+            <div class="testimonial-carousel">
+                <div class="testimonial-item">
+                    <p class="quote">"O conhecimento do **Klayton** não é teórico, é prático e brutalmente eficaz. Nossos resultados dobraram em 6 meses após a mentoria. Um investimento obrigatório."</p>
+                    <p class="author">**CEO, Indústria Premium de Tecnologia**</p>
+                </div>
+                <div class="testimonial-item">
+                    <p class="quote">"Ele entende o que significa vender para o alto padrão. Sua palestra mudou a mentalidade de 'vendedor' para 'consultor de elite' no nosso time."</p>
+                    <p class="author">**Diretor Comercial, Holding de Investimentos**</p>
+                </div>
+            </div>
+            <a href="#contato" class="btn primary-btn">SOLICITE ACESSO AO PORTFÓLIO DE CASES</a>
+        </div>
+    </section>
+
+    <section id="contato" class="section cta-section">
+        <div class="container">
+            <h2>TRANSFORME SEU DEPARTAMENTO DE VENDAS EM UMA VANTAGEM INCOMPARÁVEL.</h2>
+            <p>Se sua empresa busca a excelência e tem ambições de mercado que exigem performance máxima, **Klayton Jardim de Oliveira** é a sua resposta. Agende um contato de alto nível.</p>
+            <form action="#" method="POST" class="contact-form">
+                <input type="text" name="nome_empresa" placeholder="Nome da Empresa/Cargo" required>
+                <input type="email" name="email_contato" placeholder="Email Corporativo" required>
+                <textarea name="interesse" placeholder="Descreva o Desafio de Vendas (Ex: Lançamento de produto, quebra de plateau)."></textarea>
+                <button type="submit" class="btn primary-btn">SOLICITAR AGENDA COM KLAYTON</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Campanha de Venda de Elite | Klayton Jardim de Oliveira. Desenvolvido para Vendas de Alto Padrão.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
